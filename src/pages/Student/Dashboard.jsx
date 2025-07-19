@@ -1367,6 +1367,7 @@ const StudentDashboard = () => {
           </div>
 
         )}
+      </div>
 
       </main>
 
