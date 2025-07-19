@@ -478,7 +478,7 @@ const StaffDashboard = () => {
                 <p className="text-gray-600 dark:text-gray-400">Orders for {user?.full_name} will appear here when students place them</p>
               </div>
             ) : (
-              <div className="grid gap-6">
+              <div className="grid gap-6 text-left">
                 {orders.map((order) => (
                   <div key={order.id} className="glass-morphism-strong rounded-xl p-6">
                     <div className="flex flex-col lg:flex-row justify-between items-start mb-4 gap-4">
@@ -514,7 +514,7 @@ const StaffDashboard = () => {
                       <h5 className="font-medium text-gray-800 dark:text-white mb-2">Items from {user?.full_name}:</h5>
                       <div className="space-y-2">
                         {order.order_items.map((item) => (
-                          <div key={item.id} className="flex justify-between items-center glass-morphism p-2 rounded border border-white/10">
+                          <div key={item.id} className="flex justify-between items-center glass-morphism p-2 rounded border border-white/10 text-left">
                             <span className="text-gray-600 dark:text-gray-300">
                               {item.menu_item.name} x {item.quantity}
                             </span>
