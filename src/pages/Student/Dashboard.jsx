@@ -900,10 +900,6 @@ const StudentDashboard = () => {
 
           <div className="space-y-6">
 
-              <div className="text-left py-12">
-
-
-
             {cartItems.length === 0 ? (
 
               <div className="text-center py-12">
@@ -1074,7 +1070,7 @@ const StudentDashboard = () => {
 
             {orders.length === 0 ? (
 
-              <div className="text-left py-12">
+              <div className="text-center py-12">
 
                 <Package className="w-12 h-12 text-gray-400 mx-auto mb-4" />
 
