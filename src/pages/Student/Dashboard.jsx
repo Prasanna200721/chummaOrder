@@ -900,7 +900,7 @@ const StudentDashboard = () => {
 
           <div className="space-y-6">
 
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Your Cart</h2>
+              <div className="text-left py-12">
 
 
 
@@ -932,7 +932,7 @@ const StudentDashboard = () => {
 
               <div className="space-y-6">
 
-                <div className="space-y-4 text-left">
+                <div className="space-y-4">
 
                   {cartItems.map((item) => (
 
@@ -990,7 +990,7 @@ const StudentDashboard = () => {
 
                         </div>
 
-                        <div className="text-right">
+                        <div className="text-left">
 
                           <p className="text-lg font-bold text-gray-900 dark:text-white">
 
@@ -1024,7 +1024,7 @@ const StudentDashboard = () => {
 
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
 
-                  <div className="flex justify-between items-center text-xl font-bold mb-4 text-left">
+                  <div className="flex justify-between items-center text-xl font-bold mb-4">
 
                     <span className="text-gray-900 dark:text-white">Total:</span>
 
@@ -1074,7 +1074,7 @@ const StudentDashboard = () => {
 
             {orders.length === 0 ? (
 
-              <div className="text-center py-12">
+              <div className="text-left py-12">
 
                 <Package className="w-12 h-12 text-gray-400 mx-auto mb-4" />
 
@@ -1098,13 +1098,13 @@ const StudentDashboard = () => {
 
             ) : (
 
-              <div className="space-y-4 text-left">
+              <div className="space-y-4">
 
                 {orders.map((order) => (
 
                   <div key={order.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
 
-                    <div className="flex justify-between items-start mb-4 text-left">
+                    <div className="flex justify-between items-start mb-4">
 
                       <div>
 
@@ -1124,7 +1124,7 @@ const StudentDashboard = () => {
 
                       </div>
 
-                      <div className="text-right">
+                      <div className="text-left">
 
                         <div className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(order.status)}`}>
 
@@ -1146,7 +1146,7 @@ const StudentDashboard = () => {
 
                       {order.order_items.map((item) => (
 
-                        <div key={item.id} className="flex justify-between items-center py-2 border-t border-gray-200 dark:border-gray-600 text-left">
+                        <div key={item.id} className="flex justify-between items-center py-2 border-t border-gray-200 dark:border-gray-600">
 
                           <div className="flex items-center space-x-3">
 
@@ -1202,7 +1202,7 @@ const StudentDashboard = () => {
 
             
 
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-left">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
 
               <div className="flex items-center space-x-4 mb-6">
 

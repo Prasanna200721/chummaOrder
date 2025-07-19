@@ -470,7 +470,7 @@ const StaffDashboard = () => {
             </div>
 
             {orders.length === 0 ? (
-              <div className="text-center py-12">
+              <div className="text-left py-12">
                 <div className="w-16 h-16 glass-morphism rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">
                   <Clock className="w-8 h-8 text-gray-500 dark:text-gray-400" />
                 </div>
@@ -478,7 +478,7 @@ const StaffDashboard = () => {
                 <p className="text-gray-600 dark:text-gray-400">Orders for {user?.full_name} will appear here when students place them</p>
               </div>
             ) : (
-              <div className="grid gap-6 text-left">
+              <div className="grid gap-6">
                 {orders.map((order) => (
                   <div key={order.id} className="glass-morphism-strong rounded-xl p-6">
                     <div className="flex flex-col lg:flex-row justify-between items-start mb-4 gap-4">
@@ -496,7 +496,7 @@ const StaffDashboard = () => {
                         {/* Mobile Price - Left aligned */}
                         <p className="text-xl font-bold gradient-text md:hidden mt-2">₹{order.total_amount}</p>
                       </div>
-                      <div className="hidden md:block text-right">
+                      <div className="hidden md:block text-left">
                         <p className="text-xl font-bold gradient-text">₹{order.total_amount}</p>
                         <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(order.status)}`}>
                           {getStatusIcon(order.status)}
@@ -514,7 +514,7 @@ const StaffDashboard = () => {
                       <h5 className="font-medium text-gray-800 dark:text-white mb-2">Items from {user?.full_name}:</h5>
                       <div className="space-y-2">
                         {order.order_items.map((item) => (
-                          <div key={item.id} className="flex justify-between items-center glass-morphism p-2 rounded border border-white/10 text-left">
+                          <div key={item.id} className="flex justify-between items-center glass-morphism p-2 rounded border border-white/10">
                             <span className="text-gray-600 dark:text-gray-300">
                               {item.menu_item.name} x {item.quantity}
                             </span>
@@ -640,7 +640,7 @@ const StaffDashboard = () => {
             </div>
 
             {menuItems.length === 0 && (
-              <div className="text-center py-12">
+              <div className="text-left py-12">
                 <div className="w-16 h-16 glass-morphism rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">
                   <Plus className="w-8 h-8 text-gray-500 dark:text-gray-400" />
                 </div>
